@@ -162,7 +162,20 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(): void {
+    this.filteredItems = [...this.data].sort((a, b) => {
+      const formatStr = 'yyyyMMddHHmm';
+      const dateA = parse(a.match_date, formatStr, new Date());
+      const dateB = parse(b.match_date, formatStr, new Date());
 
+      const validA = isValid(dateA);
+      const validB = isValid(dateB);
+
+      if (!validA && !validB) return 0;
+      if (!validA) return 1;
+      if (!validB) return -1;
+
+      return dateA.getTime() - dateB.getTime();
+    });
   }
 }
 
