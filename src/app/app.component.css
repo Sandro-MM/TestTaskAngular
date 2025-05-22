@@ -1,0 +1,60 @@
+.box{
+  width: 100%;
+  height: 200px;
+  background: gray;
+  border: 1px white solid;
+}
+
+.event_name{
+  background: darkgray;
+  width: 100%;
+  height: 26px;
+  text-align: start;
+  padding: 5px;
+  color: white;
+}
+
+.match_date{
+  height: 180px;
+  padding: 10px;
+  width: 100px;
+  background: aliceblue;
+  color: cadetblue;
+  text-align: center;
+}
+
+.flex_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlight{
+  color: red;
+}
+.club_names{
+  flex: 1;
+  padding: 10px;
+  text-align: start;
+}
+
+.odds_display{
+  height: 180px;
+  padding: 10px;
+  width: 100px;
+  background: aliceblue;
+  color: cadetblue;
+}
+
+.odd_item{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.odd{
+  flex: 1;
+  text-align: end;
+}
